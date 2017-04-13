@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>恶俗古风生成器</title>
+    <style>
+        body {
+            background-image: url("http://ohe5u4k9s.bkt.clouddn.com/bg.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+        }
+        
+        div {
+            border: 1px solid;
+            border-color: lightskyblue;
+    
+        }
+        textarea{
+            margin-left: 700px;
+            width: 300px;
+            height: 150px;
+            border:4px solid;
+            border-radius: 4px;
+            border-color: lightskyblue;
+        }
+        input{
+            margin-left: 700px;
+            float: left;
+            border:4px solid;
+            border-radius: 4px;
+            border-color: lightskyblue;
+        }
+    </style>
+    <script>
+  function startbuild(){
+    var Arr = new Array("朱砂","天下", "杀伐", "人家", "韶华", "风华", "繁华", "血染", "墨染" ,"白衣" ,"素衣" ,"嫁衣", "倾城", "孤城", "空城", "旧城" ,"旧人", "伊人", "心疼", "春风", "古琴", "无情", "迷离" ,"奈何", "断弦" ,"焚尽" ,"散乱" ,"陌路", "乱世", "笑靥", "浅笑" ,"明眸", "轻叹", "烟火", "一生", "三生", "浮生", "桃花", "梨花", "落花", "烟花",   "离殇",  "情殇", "爱殇", "剑殇", "灼伤", "仓皇", "匆忙", "陌上", "清商", "焚香", "墨香" ,"微凉" ,"断肠" ,"痴狂" ,"凄凉" ,"黄梁" ,"未央", "成双", "无恙", "虚妄" ,"凝霜" ,"洛阳", "长安" ,"江南", "忘川", "千年", "纸伞", "烟雨", "回眸", "公子" ,"红尘" ,"红颜", "红衣", "红豆", "红线", "青丝", "青史", "青冢", "白发", "白首", "白骨", "黄土", "黄泉", "碧落", "紫陌", "情深缘浅", "情深不寿", "莫失莫忘", "阴阳相隔", "如花美眷", "似水流年", "眉目如画" ,"曲终人散", "繁华落尽", "不诉离殇", "一世长安");
+    
+
+     var n =  Math.floor(Math.random() * Arr.length + 1)-1;  
+      
+      function getTwo()
+      {
+          var result = Arr[Math.floor(Math.random() * Arr.length + 1)-1];
+          while(true)
+          {
+          if(result.length!=2)
+          {
+             result =  Arr[Math.floor(Math.random() * Arr.length + 1)-1];
+          }
+          else
+          {
+             return result;
+             
+          }
+          }
+           
+      }
+      function getFour()
+      {
+           var result = Arr[Math.floor(Math.random() * Arr.length + 1)-1];
+          while(true)
+          {
+          if(result.length!=4)
+          {
+             result =  Arr[Math.floor(Math.random() * Arr.length + 1)-1];
+          }
+          else
+          {
+             return result;
+             
+          }
+          }
+      }
+
+      function getOne()
+      {
+          var result = getTwo();
+          var newresult = result[0];
+          return newresult;
+      }
+
+     var theText = getTwo()+","+getTwo()+","+getTwo()+"了"+getTwo()+"。"+"\r\n"
+                   +getFour()+","+getFour()+","+"不过一场"+getFour()+"。"+"\r\n"
+                   +"你说"+getFour()+","+"我说"+getFour()+","+"最后不过"+getFour()+"。"+"\r\n"
+                   +getFour()+","+getFour()+","+"许我一场"+getFour()+"。"+"\r\n"
+                   +"一"+getOne()+"一"+getOne()+"一"+getTwo()+","+"半"+getOne()+"半"+getOne()+"半"+getTwo()+"。"+"\r\n"
+                   +"你说"+getFour()+","+getFour()+","+"后来"+getFour()+","+getFour()+"。"+"\r\n"
+                   +getFour()+","+getFour()+","+"终不敌"+getFour()+"。"+"\r\n";
+     
+    
+
+      
+     
+     document.getElementById('text1').value = theText;
+    }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1  style="text-align:center">恶俗古风生成器</h1>
+    </div>
+    <div>
+    
+    <textarea id="text1"></textarea>
+    </div>
+    <div>
+        <input type="button" value="开始" onclick="startbuild()" />
+    </div>
+    
+    
+</body>
+
+</html>
